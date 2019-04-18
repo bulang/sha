@@ -13,11 +13,9 @@ function addMapping(router, mapping) {
         if (urlArr[0]=="GET") {
             let path = urlArr[1];
             router.get(path, mapping[url]);
-            console.log(`register URL mapping: GET ${path}`);
         } else if (urlArr[0]=="POST") {
             let path = urlArr[1];
             router.post(path, mapping[url]);
-            console.log(`register URL mapping: POST ${path}`);
         } else {
             console.log(`invalid URL: ${url}`);
         }
@@ -29,7 +27,7 @@ function addMapping(router, mapping) {
 module.exports = function (file) {
     let route_file = file||"/route.js"
     let router = require('koa-router')();
-    let routes = require(baseCfg.ROOT+route_file);
-    addMapping(router, routes);
-    return router.routes();
+    let mapping = require(baseCfg.ROOT+route_file);
+    addMapping(router, mapping);
+    return router;
 };
