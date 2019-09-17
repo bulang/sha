@@ -1,7 +1,7 @@
 {
-  "name": "{{name}}",
-  "version": "{{version}}",
-  "description": "{{description}}",
+  "name": "sha",
+  "version": "1.1.0",
+  "description": "node frame base of koa",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://gitee.com/bulang/sha.git"
   },
-  "author": "{{author}}",
+  "author": "步浪",
   "license": "ISC",
   "dependencies": {
     "fs": "0.0.1-security",
